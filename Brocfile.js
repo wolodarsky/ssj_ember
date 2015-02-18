@@ -3,6 +3,9 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
+  vendorFiles: {
+    'handlebars.js': null
+  },
   fingerprint: {
     prepend: 'https://s3.amazonaws.com/ssj-bucket/'
   }
