@@ -1,3 +1,49 @@
-<h2 id="title">Sarah Safavi Jewelry</h2>
 
-{{outlet}}
+<div class="row show-for-medium-up row-margin">
+  <div class="medium-3 columns">
+    <img src="assets/img/logo/logo-long.svg">
+  </div>
+  <div class="medium-9 columns show-for-medium-up">
+    {{!-- aria-hidden="true" --}}
+    <nav role="navigation">
+      <ul class="ssj-simple-nav">
+        <li><a href="#">collections</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="#">brick &amp; mortar</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="row show-for-small-only row-margin">
+  <div class="small-10 columns small-offset-1">
+    <img src="assets/img/logo/logo-long.svg">
+  </div>
+</div>
+
+<div class="row small-collapse medium-collapse">
+  <div class="small-12 columns">
+    <img src="assets/img/galleries/main/fall-2014.jpg">
+    {{outlet}}
+  </div>
+</div>
+
+<div class="row text-center show-for-small-only row-margin">
+  <nav role="navigation" aria-hidden="true">
+    <div class="small-12 columns"><a href="#">collections</a></div>
+    <div class="small-12 columns"><a href="#">shop</a></div>
+    <div class="small-12 columns"><a href="#">brick &amp; mortar</a></div>
+    <div class="small-12 columns"><a href="#">blog</a></div>
+    <div class="small-12 columns"><a href="#">contact</a></div>
+    <div class="small-12 columns"><a href="#">about</a></div>
+  </nav>
+</div>
+
+<div class="row">
+  <div class="text-center ssj-subtle-type">
+    <small>&copy; SARAH SAFAVI JEWELRY</small>
+  </div>
+</div>
