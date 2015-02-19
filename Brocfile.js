@@ -13,6 +13,7 @@ var app = new EmberApp({
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
+app.import('bower_components/slick.js/slick/slick.js');
 //
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
