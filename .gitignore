@@ -16,4 +16,6 @@
 npm-debug.log
 testem.log
 
+public/assets/img/*
+
 config/deploy/production.js
