@@ -8,6 +8,9 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('collections');
   this.route('contact');
+  this.resource('stores', function() {
+    this.resource('store', { path: ':store_id' });
+  });
 });
 
 export default Router;

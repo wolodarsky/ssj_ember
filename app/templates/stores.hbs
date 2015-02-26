@@ -1,0 +1,13 @@
+{{#each store in model}}
+  <ul class="vcard">
+    {{#link-to 'store' store}}
+      <li class="fn">{{store.name}}</li>
+    {{/link-to}}
+    <li class="street-address">{{store.address_1}}</li>
+    <li class="street-address">{{store.address_2}}</li>
+    <li class="locality">{{store.city}}</li>
+    <li><span class="state">{{store.state}}</span>, <span class="zip">{{store.zipcode}}</span></li>
+    <li class="email"><a href="#">{{store.url}}</a></li>
+  </ul>
+{{/each}}
+{{outlet}}
