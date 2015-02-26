@@ -1,0 +1,10 @@
+<h3>Add a new store:</h3>
+<hr>
+{{input placeholder="name" value=model.name}}
+{{input placeholder="address_1" value=model.address_1}}
+{{input placeholder="address_2" value=model.address_2}}
+{{input placeholder="city" value=model.city}}
+{{input placeholder="state" value=model.state}}
+{{input placeholder="zipcode" value=model.zipcode}}
+{{input placeholder="url" value=model.url}}
+<button {{action 'save' model}}>Save</button>
