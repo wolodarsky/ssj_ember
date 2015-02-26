@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('collections');
   this.route('contact');
   this.resource('stores', function() {
-    this.resource('store', { path: ':store_id' });
+    this.resource('stores.store', { path: ':store_id' });
   });
 });
 
