@@ -19,3 +19,5 @@ testem.log
 public/assets/img/*
 
 config/deploy/production.js
+
+app/controllers/deploy.js
