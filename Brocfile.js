@@ -7,6 +7,7 @@ var app = new EmberApp({
     'handlebars.js': null
   },
   fingerprint: {
+    extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg'],
     prepend: 'https://s3.amazonaws.com/ssj-bucket/'
   }
 });
