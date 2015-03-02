@@ -21,3 +21,6 @@ public/assets/img/*
 config/deploy/production.js
 
 app/controllers/deploy.js
+
+deploy.json
+config/deploy.js
