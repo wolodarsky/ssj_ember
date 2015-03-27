@@ -11,6 +11,10 @@ export default Ember.Route.extend({
       }, function() {
         // fail
       });
+    },
+    cancel: function(model) {
+      model.destroyRecord();
+      this.transitionTo('stores');
     }
-  }
+   }
 });

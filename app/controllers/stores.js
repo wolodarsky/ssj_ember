@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   groupedStores: function() {
     let ojoj = this.get('model');
-    return $.map(ojoj.reduce((arr, item) => {
+    return Ember.$.map(ojoj.reduce((arr, item) => {
       let state = item.get('state');
       arr[state] = arr[state] || [];
       arr[state].push(item);
