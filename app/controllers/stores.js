@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     let ojoj = this.get('model');
     return $.map(ojoj.reduce((arr, item) => {
       let state = item.get('state');
-      arr[state] = arr[state] || []
+      arr[state] = arr[state] || [];
       arr[state].push(item);
       return arr;
     }, {}), (stores, state) => {
@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
       return {
         state: state,
         stores: stores
-      }
+      };
     });
   }.property('model.@each.state')
 });
