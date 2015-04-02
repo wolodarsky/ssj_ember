@@ -23,7 +23,7 @@ $crumb-font-transform: uppercase !default;
 $crumb-link-decor: underline !default;
 
 // We use these to control the slash between breadcrumbs
-$crumb-slash-color: $base !default;
+$crumb-slash-color: $ghost !default;
 $crumb-slash: "/" !default;
 
 // modify Foundation's breadcrumbs to make a simple navigation
@@ -41,10 +41,13 @@ $crumb-slash: "/" !default;
     float: left;
     font-size: 79%;
     line-height: 79%;
-    // text-transform: $crumb-font-transform;
+    text-transform: $crumb-font-transform;
     color: $black;
 
-    &:hover a, &:focus a { text-decoration: underline; }
+    &:hover a, &:focus a {
+      border-bottom: 1px solid $crumb-font-color-unavailable;
+      padding-bottom: .3em;
+    }
 
     a {
       color: $black;
@@ -66,7 +69,9 @@ $crumb-slash: "/" !default;
     // Unavailable removed color and link styles so it looks inactive.
     .active {
       color: $crumb-font-color-unavailable;
-      a { color: $crumb-font-color-unavailable; }
+      // border-top: 1px solid $crumb-font-color-unavailable;
+      // padding-top: .3em;
+      // a { color: $crumb-font-color-unavailable; }
 
       &:hover,
       &:hover a,
@@ -75,6 +80,8 @@ $crumb-slash: "/" !default;
         text-decoration: none;
         color: $crumb-font-color-unavailable;
         cursor: default;
+        border-bottom: none;
+        padding-bottom: none;
       }
     }
 

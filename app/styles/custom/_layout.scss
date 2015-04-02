@@ -7,3 +7,14 @@
   margin-top: 3em;
   margin-bottom: 3em;
 }
+
+.light-padding {
+  padding: 1em;
+}
+
+.subtle-section {
+  padding-top: 1em;
+  color: $iron;
+  border-bottom: 1px $smoke solid;
+  margin-bottom: 1em;
+}

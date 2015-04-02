@@ -1,20 +1,15 @@
-
-{{#each set in groupedStores}}
-  <div class="row">{{set.state}}</div>
-  {{#each store in set.stores}}
-    <ul class="vcard">
-      {{#link-to 'stores.store' store}}
-        <li class="fn">{{store.name}}</li>
-      {{/link-to}}
-      <li class="street-address">{{store.address_1}}</li>
-      <li class="street-address">{{store.address_2}}</li>
-      <li class="locality">{{store.city}}</li>
-      <li><span class="state">{{store.state}}</span>, <span class="zip">{{store.zipcode}}</span></li>
-      <li class="email"><a href="#">{{store.url}}</a></li>
+<div class="light-padding">
+  {{#each set in groupedStores}}
+    <div class="text-center subtle-section">{{set.state}}</div>
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+      {{#each store in set.stores}}
+        <li class="text-center">
+          {{vee-card store=store}}
+        </li>
+      {{/each}}
     </ul>
+    <div class="row">
+    </div>
   {{/each}}
-{{/each}}
-{{#link-to 'stores.new'}}
-  <button>Add Store</button>
-{{/link-to}}
+</div>
 {{outlet}}
