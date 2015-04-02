@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  groupedStores: function() {
+  groupedStores: Ember.computed('model.@each.state', function() {
     let ojoj = this.get('model');
     return Ember.$.map(ojoj.reduce((arr, item) => {
       let state = item.get('state');
@@ -15,5 +15,5 @@ export default Ember.Controller.extend({
         stores: stores
       };
     });
-  }.property('model.@each.state')
+  })
 });
