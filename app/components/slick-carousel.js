@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       fade: true,
       cssEase: 'linear',
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: this.get('autoplaySpeed') || 3000,
       // adaptiveHeight: true,
       pauseOnHover: false,
       // responsive: [
