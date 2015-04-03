@@ -6,7 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('collections');
+  this.route('collections', function() {
+    this.route('spring-2015');
+    this.route('fall-winter-2014');
+    this.route('summer-2014');
+  });
   this.route('contact');
   this.resource('stores', function() {
     this.resource('stores.store', { path: ':store_id' });
