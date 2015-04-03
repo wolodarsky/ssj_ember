@@ -16,7 +16,7 @@ Router.map(function() {
     // this.resource('stores.store', { path: ':store_id' });
     // this.route('new');
   });
-  this.route('about');
+  // this.route('about');
 });
 
 export default Router;
