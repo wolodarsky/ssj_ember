@@ -40,13 +40,14 @@ $crumb-slash: "/" !default;
     // margin: 0;
     float: left;
     font-size: 79%;
-    line-height: 79%;
+    line-height: 200%;
     text-transform: $crumb-font-transform;
     color: $black;
 
     &:hover a, &:focus a {
-      border-bottom: 1px solid $crumb-font-color-unavailable;
-      padding-bottom: .3em;
+      // border-bottom: 1px solid $crumb-font-color-unavailable;
+      // padding-bottom: .3rem;
+      color: $crumb-font-color-unavailable;
     }
 
     a {
@@ -98,4 +99,8 @@ $crumb-slash: "/" !default;
       margin: 0;
     }
   }
+}
+
+.hamburger {
+  @include hamburger($tabbar-hamburger-icon-width, $tabbar-hamburger-icon-left, $tabbar-hamburger-icon-top, $tabbar-hamburger-icon-thickness, $tabbar-hamburger-icon-gap, $tabbar-menu-icon-color, $tabbar-menu-icon-hover, true);
 }

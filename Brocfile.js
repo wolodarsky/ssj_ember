@@ -3,9 +3,15 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
+
   vendorFiles: {
     'handlebars.js': null
   },
+
+  'ember-cli-foundation-sass': {
+    'foundationJs': ['offcanvas']
+  },
+
   fingerprint: {
     extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg'],
     prepend: 'https://s3.amazonaws.com/ssj-bucket/'

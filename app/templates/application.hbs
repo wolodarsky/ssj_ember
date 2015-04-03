@@ -1,47 +1,78 @@
-
-<div class="row show-for-medium-up row-margin header-margin">
-  <div class="medium-3 columns">
-    {{#link-to "index"}}<img src="assets/img/logo/logo-long.svg">{{/link-to}}
-  </div>
-  <div class="medium-9 columns show-for-medium-up">
-    <nav role="navigation">
-      <ul class="ssj-simple-nav">
-        <li>{{#link-to 'collections'}}collections{{/link-to}}</li>
-        <li><a href='https://www.etsy.com/shop/SarahSafaviJewelry'>shop</a></li>
-        <li>{{#link-to 'stores'}}brick &amp; mortar{{/link-to}}</li>
-        <li><a href='http://sarahsafavijewelry.tumblr.com/'>blog</a></li>
-        <li>{{#link-to 'about'}}about{{/link-to}}</li>
-        <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
-      </ul>
+<div class="hide-for-large-up off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
     </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li>{{#link-to 'collections'}}COLLECTIONS{{/link-to}}</li>
+        <li><a href='https://www.etsy.com/shop/SarahSafaviJewelry'>SHOP</a></li>
+        <li>{{#link-to 'stores'}}BRICK &amp; MORTAR{{/link-to}}</li>
+        <li><a href='http://sarahsafavijewelry.tumblr.com/'>BLOG</a></li>
+        <li>{{#link-to 'about'}}ABOUT{{/link-to}}</li>
+        <li>{{#link-to 'contact'}}CONTACT{{/link-to}}</li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+
+      <div class="row mobile-header-margin">
+        <div class="small-10 columns small-offset-1">
+          {{#link-to "index"}}<img src="assets/img/logo/logo-long.svg">{{/link-to}}
+        </div>
+      </div>
+
+      <div class="row small-collapse medium-collapse">
+        <div class="small-12 columns">
+          {{outlet}}
+        </div>
+      </div>
+
+      <div class="row header-margin">
+        <div class="text-center ssj-subtle-type">
+          <small>&copy; SARAH SAFAVI JEWELRY</small>
+        </div>
+      </div>
+
+    </section>
+
+  <a class="exit-off-canvas"></a>
+
   </div>
 </div>
 
-<div class="row show-for-small-only header-margin">
-  <div class="small-10 columns small-offset-1">
-    {{#link-to "index"}}<img src="assets/img/logo/logo-long.svg">{{/link-to}}
+
+<div class="show-for-large-up">
+  <div class="row  row-margin header-margin">
+    <div class="medium-3 columns">
+      {{#link-to "index"}}<img src="assets/img/logo/logo-long.svg">{{/link-to}}
+    </div>
+    <div class="medium-9 columns show-for-medium-up">
+      <nav role="navigation">
+        <ul class="ssj-simple-nav">
+          <li>{{#link-to 'collections'}}collections{{/link-to}}</li>
+          <li><a href='https://www.etsy.com/shop/SarahSafaviJewelry'>shop</a></li>
+          <li>{{#link-to 'stores'}}brick &amp; mortar{{/link-to}}</li>
+          <li><a href='http://sarahsafavijewelry.tumblr.com/'>blog</a></li>
+          <li>{{#link-to 'about'}}about{{/link-to}}</li>
+          <li>{{#link-to 'contact'}}contact{{/link-to}}</li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
 
-<div class="row small-collapse medium-collapse">
-  <div class="small-12 columns">
-    {{outlet}}
+  <div class="row small-collapse medium-collapse">
+    <div class="small-12 columns">
+      {{outlet}}
+    </div>
   </div>
-</div>
 
-<div class="row text-center show-for-small-only row-margin">
-  <nav role="navigation" aria-hidden="true">
-    <div class="small-12 columns">{{#link-to 'collections'}}collections{{/link-to}}</div>
-    <div class="small-12 columns"><a href='https://www.etsy.com/shop/SarahSafaviJewelry'>shop</a></div>
-    <div class="small-12 columns">{{#link-to 'stores'}}brick &amp; mortar{{/link-to}}</div>
-    <div class="small-12 columns"><a href='http://sarahsafavijewelry.tumblr.com/'>blog</a></div>
-    <div class="small-12 columns">{{#link-to 'about'}}about{{/link-to}}</div>
-    <div class="small-12 columns">{{#link-to 'contact'}}contact{{/link-to}}</div>
-  </nav>
-</div>
-
-<div class="row header-margin">
-  <div class="text-center ssj-subtle-type">
-    <small>&copy; SARAH SAFAVI JEWELRY</small>
+  <div class="row header-margin">
+    <div class="text-center ssj-subtle-type">
+      <small>&copy; SARAH SAFAVI JEWELRY</small>
+    </div>
   </div>
 </div>

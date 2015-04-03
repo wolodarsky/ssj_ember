@@ -1,6 +1,19 @@
-<a href="{{store.url}}">
-  <div>{{store.name}}</div>
+{{#if store.url}}
+  <a href="{{store.url}}">
+    <div><b>{{store.name}}</b></div>
+    <div class="street-address">
+      <i>{{store.address_1}}</i>
+    </div>
+    <div>
+      <i>{{store.city}}, {{store.state}}</i>
+    </div>
+  </a>
+{{else}}
+  <div><b>{{store.name}}</b></div>
   <div class="street-address">
-    <i>{{store.address_1}}, {{store.city}}, {{store.state}}</i>
+    <i>{{store.address_1}}</i>
   </div>
-</a>
+  <div>
+    <i>{{store.city}}, {{store.state}}</i>
+  </div>
+{{/if}}
