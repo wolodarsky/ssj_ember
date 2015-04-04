@@ -13,7 +13,7 @@ var app = new EmberApp({
   },
 
   fingerprint: {
-    extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg'],
+    extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg', 'ttf', 'woff', 'eot'],
     prepend: 'https://s3.amazonaws.com/ssj-bucket/'
   }
 });
