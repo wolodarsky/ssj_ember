@@ -14,7 +14,7 @@ var app = new EmberApp({
 
   fingerprint: {
     extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg', 'ttf', 'woff', 'eot'],
-    prepend: 'https://d3djz0y0lmwsm5.cloudfront.net/assets/'
+    prepend: 'https://d3djz0y0lmwsm5.cloudfront.net/'
   }
 });
 
