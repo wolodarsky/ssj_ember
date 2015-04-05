@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
   this.route('collections', function() {
     this.route('spring-2015');
     this.route('fall-winter-2014');
