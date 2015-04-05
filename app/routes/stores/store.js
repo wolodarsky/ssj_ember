@@ -1,20 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(params) {
+  model: (params) => {
     return this.store.find('store', params.store_id);
   },
   actions: {
-    save: function(model) {
-      model.save().then(function() {
+    save: (model) => {
+      model.save().then( () => {
         // succes
-      }, function() {
+      }, () =>  {
         // fail
       });
     },
-    cancel: function(model) {
+    cancel: (model) => {
       model.rollback();
       this.transitionTo('stores');
+    },
+    destroy: (model) => {
+      model.destroyRecord();
     }
   }
 });
