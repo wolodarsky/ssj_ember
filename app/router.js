@@ -14,7 +14,7 @@ Router.map(function() {
   });
   this.route('contact');
   this.resource('stores', function() {
-    this.resource('stores.store', { path: ':store_id' });
+    this.resource('stores.edit', { path: ':store_id' });
     this.route('new');
   });
   // this.route('about');

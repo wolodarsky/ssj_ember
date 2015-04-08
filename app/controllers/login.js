@@ -4,7 +4,15 @@ export default Ember.Controller.extend({
     actions: {
       authenticate: function() {
         let data = this.getProperties('identification', 'password');
-        return this.get('session').authenticate('simple-auth-authenticator:devise', data);
+        return this.get('session')
+            .authenticate('simple-auth-authenticator:devise', data)
+          .then( () => {
+            // success handled by sessionAuthenticationSucceeded()
+            // on ApplicationRoute
+          }, () => {
+            this.set('error', 'Invalid to Login');
+          }
+        );
       }
   }
 });

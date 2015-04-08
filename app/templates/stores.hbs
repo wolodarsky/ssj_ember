@@ -5,6 +5,9 @@
       {{#each store in set.stores}}
         <li class="text-center">
           {{vee-card store=store}}
+          {{#if session.isAuthenticated}}
+            {{#link-to 'stores.edit' store}}EDIT{{/link-to}}
+          {{/if}}
         </li>
       {{/each}}
     </ul>
