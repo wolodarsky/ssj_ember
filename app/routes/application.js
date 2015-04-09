@@ -6,13 +6,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     invalidateSession: function() {
       this.get('session').invalidate();
     }
-  },
-
-  /**
-   * ember-simple-auth-callback
-   */
-  sessionInvalidationSucceeded: function() {
-    this.transitionTo('index');
   }
 
 });
