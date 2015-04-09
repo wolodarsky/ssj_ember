@@ -1,3 +1,9 @@
+{{#if session.isAuthenticated}}
+  {{#link-to 'stores.new'}}<button>Add a Store</button>{{/link-to}}
+{{/if}}
+
+{{outlet}}
+
 <div class="light-padding">
   {{#each set in groupedStores}}
     <div class="text-center subtle-section">{{set.longState}}</div>
@@ -6,7 +12,7 @@
         <li class="text-center">
           {{vee-card store=store}}
           {{#if session.isAuthenticated}}
-            {{#link-to 'stores.edit' store}}EDIT{{/link-to}}
+            {{#link-to 'stores.edit' store}}edit{{/link-to}}
           {{/if}}
         </li>
       {{/each}}
@@ -15,4 +21,3 @@
     </div>
   {{/each}}
 </div>
-{{outlet}}

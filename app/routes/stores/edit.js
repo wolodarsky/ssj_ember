@@ -6,19 +6,20 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     return this.store.find('store', params.store_id);
   },
   actions: {
-    save: (model) => {
+    save: function(model) {
       model.save().then( () => {
-        // succes
+        this.transitionTo('stores');
       }, () =>  {
-        // fail
+        this.set('error', 'Unable to Save Change');
       });
     },
     cancel: (model) => {
       model.rollback();
       this.transitionTo('stores');
     },
-    destroy: (model) => {
+    destroy: function(model) {
       model.destroyRecord();
+      this.transitionTo('stores');
     }
   }
 });
