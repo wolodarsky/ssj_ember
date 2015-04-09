@@ -9,8 +9,8 @@ export default Ember.Controller.extend({
           .then( () => {
             // success handled by sessionAuthenticationSucceeded()
             // on ApplicationRoute
-          }, () => {
-            this.set('error', 'Invalid to Login');
+          }, (response) => {
+            this.set('error', response.error);
           }
         );
       }
