@@ -7,7 +7,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     var superResult = this._super(transition);
 
     console.log('testing');
-    if (!this.get(Configuration.sessionPropertyName).get('is_admin')) {
+    if (!this.get(Configuration.sessionPropertyName).get('isAdmin')) {
       transition.abort();
       this.get(Configuration.sessionPropertyName).set('attemptedTransition', transition);
       Ember.assert('The route configured as Configuration.authenticationRoute cannot implement the AuthenticatedRouteMixin mixin as that leads to an infinite transitioning loop!', this.get('routeName') !== Configuration.authenticationRoute);
