@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('route:collections/fall-winter-2014', {
+moduleFor('route:generic-admin-route', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
