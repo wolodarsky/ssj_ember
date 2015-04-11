@@ -1,7 +1,6 @@
-import Ember from 'ember';
-import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
+import GenericAdminRoute from '../generic-admin-route';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default GenericAdminRoute.extend({
   model: function() {
     return this.store.createRecord('store');
   },
