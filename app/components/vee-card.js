@@ -14,9 +14,9 @@ export default Ember.Component.extend({
       });
     },
 
-    cancel: (model) => {
+    cancel: function(model) {
+      this.set('isEditing', false);
       model.rollback();
-      this.transitionTo('shops');
     },
 
     destroy: function(model) {

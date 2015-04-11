@@ -10,10 +10,7 @@
     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
       {{#each store in set.stores}}
         <li class="text-center">
-          {{vee-card store=store}}
-          {{#if session.isAuthenticated}}
-            {{#link-to 'stores.edit' store}}edit{{/link-to}}
-          {{/if}}
+          {{vee-card model=store}}
         </li>
       {{/each}}
     </ul>

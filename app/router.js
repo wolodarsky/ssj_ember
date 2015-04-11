@@ -16,8 +16,8 @@ Router.map(function() {
 
   this.route('contact');
 
-  this.route('shops', function() {
-    this.route('edit', { path: ':shop_id' });
+  this.route('stores', function() {
+    this.route('edit', { path: ':store_id' });
     this.route('new');
   });
 
