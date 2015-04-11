@@ -75,7 +75,7 @@
       <small>
         &copy; SARAH SAFAVI JEWELRY
         {{#if session.isAuthenticated}}
-          - <a {{ action 'invalidateSession' }}>Logout</a>
+          - <a {{ action 'invalidateSession' }}>Logout {{session.email}}</a>
         {{/if}}
       </small>
     </div>
