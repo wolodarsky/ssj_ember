@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'span',
   classNames: ['vee-card'],
+  stateNames: Ember.inject.service(),
 
   actions: {
 
