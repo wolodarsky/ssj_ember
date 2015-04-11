@@ -9,8 +9,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     save: function(model) {
       model.save().then( () => {
         this.transitionTo('stores');
-      }, function() {
-        this.set('error', "Unable to Save");
+      }, (error) => {
+        console.log(error.responseJSON.error);
       });
     },
     cancel: function(model) {
