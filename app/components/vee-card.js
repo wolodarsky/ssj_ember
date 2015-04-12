@@ -22,11 +22,15 @@ export default Ember.Component.extend({
     },
 
     destroy: function(model) {
-      model.destroyRecord();
-      this.transitionTo('shops');
+      model.destroyRecord().then( () => {
+        // deleted
+      }, () => {
+        this.set('error', 'There was an error processing the Delete. Please refresh');
+      });
     },
 
     editShop: function() {
+      this.set('error', '');
       this.set('isEditing', true);
     }
 
