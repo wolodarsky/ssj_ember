@@ -9,8 +9,9 @@ export default Ember.Component.extend({
 
     save: function(model) {
       model.save().then( () => {
-        this.transitionTo('shops');
-      }, () =>  {
+        this.set('isEditing', false);
+      }, (error) =>  {
+        console.log(error);
         this.set('error', 'Unable to Save Change');
       });
     },
