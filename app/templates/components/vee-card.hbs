@@ -1,19 +1,32 @@
-{{#if store.url}}
-  <a href="{{store.url}}">
-    <div><b>{{store.name}}</b></div>
+{{#if isEditing}}
+
+  {{partial "stores/form"}}
+  <button {{action 'destroy' model}}>Delete</button>
+
+{{else}}
+
+  {{#if model.url}}
+    <a href="{{model.url}}">
+      <div><b>{{model.name}}</b></div>
+      <div class="street-address">
+        <i>{{model.address_1}}</i>
+      </div>
+      <div>
+        <i>{{model.city}}, {{model.state}}</i>
+      </div>
+    </a>
+  {{else}}
+    <div><b>{{model.name}}</b></div>
     <div class="street-address">
-      <i>{{store.address_1}}</i>
+      <i>{{model.address_1}}</i>
     </div>
     <div>
-      <i>{{store.city}}, {{store.state}}</i>
+      <i>{{model.city}}, {{model.state}}</i>
     </div>
-  </a>
-{{else}}
-  <div><b>{{store.name}}</b></div>
-  <div class="street-address">
-    <i>{{store.address_1}}</i>
-  </div>
-  <div>
-    <i>{{store.city}}, {{store.state}}</i>
-  </div>
+  {{/if}}
+
+  {{#if session.isAdmin}}
+    <span {{action 'editShop'}}>edit</span>
+  {{/if}}
+
 {{/if}}

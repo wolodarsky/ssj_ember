@@ -1,10 +1,18 @@
-<hr>
+{{stateName.stateArray.length}}
 {{input placeholder="name" value=model.name}}
 {{input placeholder="address_1" value=model.address_1}}
 {{input placeholder="address_2" value=model.address_2}}
 {{input placeholder="city" value=model.city}}
-{{input placeholder="state" value=model.state}}
+{{view "select"
+       content=stateNames.stateArray
+       prompt="state"
+       value=model.state
+       optionValuePath="content.abbr"
+       optionLabelPath="content.name"}}
 {{input placeholder="zipcode" value=model.zipcode}}
 {{input placeholder="url" value=model.url}}
+{{#if error}}
+  <div data-alert class="alert-box alert">{{error}}</div>
+{{/if}}
 <button {{action 'save' model}}>Save</button>
 <button {{action 'cancel' model}}>Cancel</button>

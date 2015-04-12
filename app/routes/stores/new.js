@@ -1,15 +1,15 @@
-import Ember from 'ember';
+import GenericAdminRoute from '../generic-admin-route';
 
-export default Ember.Route.extend({
+export default GenericAdminRoute.extend({
   model: function() {
     return this.store.createRecord('store');
   },
   actions: {
     save: function(model) {
-      model.save().then(function() {
-        // succes
-      }, function() {
-        // fail
+      model.save().then( () => {
+        this.transitionTo('stores');
+      }, (error) => {
+        console.log(error.responseJSON.error);
       });
     },
     cancel: function(model) {
