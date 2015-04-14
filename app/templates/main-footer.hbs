@@ -1,0 +1,10 @@
+<div class="row header-margin">
+  <div class="text-center ssj-subtle-type">
+    <small>
+      &copy; SARAH SAFAVI JEWELRY
+      {{#if session.isAuthenticated}}
+        - <a {{ action 'invalidateSession' }}>Logout {{session.email}}</a>
+      {{/if}}
+    </small>
+  </div>
+</div>
