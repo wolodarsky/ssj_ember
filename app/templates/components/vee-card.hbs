@@ -1,4 +1,4 @@
-{{#if isEditing}}
+{{#liquid-if isEditing use='crossFade'}}
 
   {{partial "stores/form"}}
   <button {{action 'destroy' model}}>Delete</button>
@@ -29,4 +29,4 @@
     <span {{action 'editShop'}}>edit</span>
   {{/if}}
 
-{{/if}}
+{{/liquid-if}}

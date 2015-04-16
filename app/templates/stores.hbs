@@ -1,10 +1,11 @@
-{{#if session.isAdmin}}
-  {{#link-to 'stores.new'}}<button>Add a Store</button>{{/link-to}}
-{{/if}}
 
-{{outlet}}
+{{liquid-outlet use="crossFade"}}
 
 <div class="light-padding">
+  {{#if session.isAdmin}}
+    {{#link-to 'stores.new'}}<button>Add a Store</button>{{/link-to}}
+  {{/if}}
+
   {{#each set in groupedStores}}
     <div class="text-center subtle-section">{{set.longState}}</div>
     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
