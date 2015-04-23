@@ -9,7 +9,7 @@ var app = new EmberApp({
   },
 
   'ember-cli-foundation-sass': {
-    'foundationJs': ['offcanvas']
+    'foundationJs': ['offcanvas', 'interchange']
   },
 
   fingerprint: {

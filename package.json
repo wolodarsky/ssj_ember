@@ -42,6 +42,8 @@
     "ember-export-application-global": "^1.0.2",
     "express": "^4.8.5",
     "glob": "^4.0.5",
+    "grunt": "^0.4.5",
+    "grunt-responsive-images": "^0.1.6",
     "liquid-fire": "^0.19.3"
   }
 }

@@ -11,6 +11,6 @@ export default Ember.View.extend({
         // [ true | false ]
         close_on_click : true
       }
-    }); //or Ember.$(document).foundation();
+    });
   }
 });
