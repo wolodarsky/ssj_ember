@@ -7,23 +7,22 @@ module.exports = function(grunt) {
           sizes: [{
             name: 'small',
             width: 640,
-            quality: 60
+            quality: 75
           },{
             name: 'medium',
             width: 1024,
-            quality: 60
+            quality: 75
           },{
             name: 'large',
             width: 2000,
-            quality: 60
+            quality: 75
           }]
         },
         files: [{
           expand: true,
           src: ['**/*.jpg'],
-          cwd: 'public/assets/img/galleries/spring-2015',
-          // dest: 'public/assets/img/galleries/spring-2015/<%= path %>/<%= name %>'
-          dest: 'public/assets/img/galleries/spring-2015/<%= name %>'
+          cwd: 'public/assets/img/originals',
+          dest: 'public/assets/img/galleries'
         }]
       }
     },
